@@ -10,23 +10,10 @@ class Student :: public Person{
   int yearLevel;
   string major;
   public:
-  Student(){
-
-  }
-  Student(int year, string m){
-    yearLevel = year;
-    major = m;
-  }
-  int getYearLevel(){
-  return yearLevel;
-  }
-  string getMajor(){
-  return major;
-  }
-  void display(){
-    cout<<"Name: "<<getName()<<endl;
-    cout<<"Year: "<<getYearLevel()<<endl;
-    cout<<"Major: "<<getMajor()<<endl;
-  }
+  Student();
+  Student(int year, string m);
+  int getYearLevel();
+  string getMajor();
+  void display();
 }
 #endif
