@@ -20,7 +20,7 @@ class Course{
     int getCourseCode();
     int getMaxStudents();
     Student getStudents();
-    void display();
+    void displayCourseInfo();
 }
 
 #endif
