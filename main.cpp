@@ -54,7 +54,7 @@ Student::void display(){
 
 // ==================== Instructor Class Implementation ====================
 
-Instructor:: Instructor(){
+Instructor::Instructor(){
     }
 Instructor::Instructor(string d, int exp, string n, int ID){
     Person(n, ID);
@@ -92,13 +92,13 @@ Course::void addStudent(const Student& s){
 Course::string getCourseName(){
         return courseName;
     }
-Course::int getCourseCode(){
+Course::string getCourseCode(){
         return courseCode;
     }
 Course::int getMaxStudents(){
         return maxStudents;
     }
-Course::void display(){
+Course::void displayCourseInfo(){
         cout<<"Course: "<<getCourseCode()<<" - "<<getCourseName()<<endl;
         cout<<"Max Students: "<<getMaxStudents()<<endl;
         cout<<"Currently Enrolled: "<<student.display()<<endl;
@@ -107,8 +107,10 @@ Course::void display(){
 
 // ==================== Main Function ====================
 int main() {
-   Student(2,"Informatics","Omar Nabil",2202);
-   Instructor("Computer Science",5,"Dr Lina Khaled",1202);
-    
+   Student s = new Student(2,"Informatics","Omar Nabil",2202);
+   Instructor i = Instructor("Computer Science",5,"Dr Lina Khaled",1202);
+Course c = new Course("CS101","Introduction to Programming", 3);
+c.addStudent(*s);
+c.displayCourseInfo();
     return 0;
 }
