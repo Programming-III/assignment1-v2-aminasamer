@@ -8,11 +8,18 @@ private:
 string name;
 int id;
 public:
+Person(){
+
+}
+Person(string n, int ID){
+    name = n;
+    id = ID;
+}
 string getName(){
-return name;
+    return name;
 }
 int getId(){
-return id;
+    return id;
 }
 void display(){
   cout<<"Name: "<<getName()<<endl;
