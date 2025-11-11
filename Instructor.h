@@ -9,24 +9,11 @@ class Instructor :: public Person{
     string department;
     int experienceYears;
     public:
-    Instructor(){
-
-    }
-    Instructor(string d, int exp){
-        department = d;
-        experienceYears = exp;
-    }
-    string getDepartment(){
-        return department;
-    }
-    int getExperienceYears(){
-        return experienceYears;
-    }
-    void display(){
-        cout<<"Name: "<<getName()<<endl;
-        cout<<"Department: "<<getDepartment()<<endl;
-        cout<<"Experience: "<<getExperienceYears()<<endl;
-    }
+    Instructor();
+    Instructor(string d, int exp);
+    string getDepartment();
+    int getExperienceYears();
+    void display();
 }
 
 #endif
